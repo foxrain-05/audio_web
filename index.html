@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="audio-player">
+            <audio class="audio" src="audio.mp3"></audio>
+            <div class="play-pause">
+                <img src="./icon/play.svg" alt="play" class="play" />
+                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+            </div>
+
+            <input class="seek-bar" type="range" min="0" max="100" value="0" />
+            <span class="current-time">0:00</span>/<span class="duration">0:00</span>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
