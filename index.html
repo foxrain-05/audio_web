@@ -4,20 +4,69 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/audio_bar.css" />
     </head>
     <body>
-        <div class="audio-player">
-            <audio class="audio" src="audio.mp3"></audio>
-            <div class="play-pause">
-                <img src="./icon/play.svg" alt="play" class="play" />
-                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+        <div class="content">
+            <div class="divider">
+                <span>2024.11.26 오후 1시 30분 녹음 시작</span>
             </div>
 
-            <input class="seek-bar" type="range" min="0" max="100" value="0" />
-            <span class="current-time">0:00</span>/<span class="duration">0:00</span>
+            <div class="talk active">
+                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
+                <div class="talk-content">
+                    <div class="talk-header">
+                        <div class="talk-info">
+                            <h3 class="talk-name">유저 이름</h3>
+                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                        </div>
+                    </div>
+
+                    <p class="talk-text">
+                        아아. 제 목소리가 들리나요? 오늘 여기 뒤에 요즘 클래스 101 촬영팀이 왔어요. 알지 넘버원 크리스터들 강의 많이 있잖아.
+                        쌤이 넘버원에 뽑혔는데. 긴장하지 말고 왜 이렇게 긴장을 했어? 야 규진아 너 왜 긴장했어? 발발발벌 떠네? 긴장하지 마.
+                        쌤은 뭐 긴장 안 하지. 나는 뭐, 내가 한국지리 21년 가르쳤는데 무슨 뭐 무슨 긴장을 한다. 그래 내가 응 긴장 좀 해봤으면
+                        좋겠어. 너무 청심환을 내가 긴 주. 다시. 규진아 왜 이렇게 긴장했어? 무슨 긴장을 한다 그래 내가. 이건 뚜껑도 닫고
+                        마셨어.
+                    </p>
+                    <div class="audio-player">
+                        <audio class="audio" src="./audio/audio.mp3"></audio>
+                        <div class="play-pause">
+                            <img src="./icon/play.svg" alt="play" class="play" />
+                            <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+                        </div>
+
+                        <input class="seek-bar" type="range" min="0" max="100" value="0" />
+                        <span class="current-time">0:00</span><span class="separator">/</span><span class="duration">0:00</span>
+                        ⋮
+                    </div>
+                </div>
+            </div>
+
+            <div class="talk">
+                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
+                <div class="talk-content">
+                    <div class="talk-header">
+                        <div class="talk-info">
+                            <h3 class="talk-name">유저 이름</h3>
+                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                        </div>
+                    </div>
+
+                    <p class="talk-text">아아. 제 목소리가 들리나요?</p>
+                </div>
+            </div>
+
+            <div class="divider">
+                <span>오후 1시 42분 녹음 종료</span>
+            </div>
+
+            <div class="divider">
+                <span>오후 2시 38분 녹음 시작</span>
+            </div>
         </div>
 
-        <script src="main.js"></script>
+        <script src="./script/main.js"></script>
     </body>
 </html>

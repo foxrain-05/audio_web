@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Pretendard-Regular", sans-serif;
+    font-size: 16px;
+}
+
+.content {
+    width: clamp(320px, 90%, 960px);
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 clamp(12px, 3vw, 24px);
+
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #a4a6ad;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #676c71;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #a4a6ad;
+}
+
+.divider span {
+    color: #676c71;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+}
+
+.talk {
+    display: flex;
+    padding: 10px;
+}
+
+.talk:hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.talk-content {
+    margin-left: 10px;
+}
+
+.talk-header .talk-info {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.talk-header .talk-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.talk-header .talk-time {
+    font-size: 12px;
+    color: #a4a6ad;
+}
+
+.talk-text {
+    font-size: 14px;
+    color: #676c71;
+    margin-top: 5px;
+    margin-right: 20px;
+}

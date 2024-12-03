@@ -1,22 +1,25 @@
-body {
-    background-color: #ededed;
-}
-
 .audio-player {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px;
-    width: 400px;
-    background-color: white;
+    padding: 4px;
+
+    margin-top: 15px;
+    margin-right: 20px;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .seek-bar {
     appearance: none;
+    width: 10rem;
     height: 6px;
     border-radius: 5px;
     --progress: 0%;
-    background: linear-gradient(to right, #3e5267 var(--progress), #ededed var(--progress));
+    background: linear-gradient(to right, #3e5267 var(--progress), #e2e2e2 var(--progress));
     transition: --progress 0.1s linear;
 }
 
@@ -71,4 +74,13 @@ body {
 
 .hidden {
     display: none;
+}
+
+.current-time,
+.duration,
+.separator {
+    color: #525252;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
 }
