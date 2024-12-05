@@ -1,21 +1,15 @@
+
+
 .audio-player {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 4px;
-
-    margin-top: 15px;
-    margin-right: 20px;
-
-    border-radius: 8px;
-
-    background-color: #ffffff;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    margin-left: 15px;
 }
 
 .seek-bar {
     appearance: none;
-    width: 10rem;
+    width: 9.5rem;
     height: 6px;
     border-radius: 5px;
     --progress: 0%;
@@ -44,18 +38,13 @@
     transform: scale(1);
 }
 
+
 .play,
 .pause {
     width: 14px;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* 드래그 방지 */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -79,8 +68,13 @@
 .current-time,
 .duration,
 .separator {
-    color: #525252;
+    display:  inline-block;
+    color: #3f3f3f;
     font-size: 0.9rem;
     font-weight: 500;
-    letter-spacing: -0.5px;
+    width: 1.85rem;
+}
+
+.separator {
+    display: inline;
 }

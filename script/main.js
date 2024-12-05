@@ -63,4 +63,5 @@ const initializeEventListeners = () => {
     });
 };
 
+updateProgress();
 initializeEventListeners();

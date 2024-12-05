@@ -4,6 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="./style/style.css" />
         <link rel="stylesheet" href="./style/audio_bar.css" />
     </head>
@@ -30,33 +34,52 @@
                         좋겠어. 너무 청심환을 내가 긴 주. 다시. 규진아 왜 이렇게 긴장했어? 무슨 긴장을 한다 그래 내가. 이건 뚜껑도 닫고
                         마셨어.
                     </p>
-                    <div class="audio-player">
-                        <audio class="audio" src="./audio/audio.mp3"></audio>
-                        <div class="play-pause">
-                            <img src="./icon/play.svg" alt="play" class="play" />
-                            <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
-                        </div>
 
-                        <input class="seek-bar" type="range" min="0" max="100" value="0" />
-                        <span class="current-time">0:00</span><span class="separator">/</span><span class="duration">0:00</span>
-                        ⋮
+                    <div class="action-bar">
+                        <div class="audio-player">
+                            <audio class="audio" src="./audio/audio.mp3"></audio>
+                            <div class="play-pause">
+                                <img src="./icon/play.svg" alt="play" class="play" />
+                                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+                            </div>
+
+                            <input class="seek-bar" type="range" min="0" max="100" value="0" />
+                            <span class="time">
+                                <span class="current-time">0:00</span><span class="separator"> / </span><span class="duration">0:00</span>
+                            </span>
+                            
+                        </div>
+                        <div class="actions">
+                            <div class="more">⋮</div>
+                            <div class="more-menu">
+                                <button class="menu-item copy">
+                                    <img src="./icon/copy.svg" alt="복사" />
+                                    복사
+                                </button>
+                                <button class="menu-item download">
+                                    <img src="./icon/download.svg" alt="다운로드" />
+                                    다운로드
+                                </button>
+                                <button class="menu-item edit">
+                                    <img src="./icon/edit.svg" alt="수정" />
+                                    수정
+                                </button>
+                                <button class="menu-item recognize">
+                                    <img src="./icon/refresh.svg" alt="재인식" />
+                                    재인식
+                                </button>
+                                <button class="menu-item delete">
+                                    <img src="./icon/delete.svg" alt="삭제" />
+                                    삭제
+                                </button>
+                            </div>
+                        </div>
+                                           
                     </div>
                 </div>
             </div>
 
-            <div class="talk">
-                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
-                <div class="talk-content">
-                    <div class="talk-header">
-                        <div class="talk-info">
-                            <h3 class="talk-name">유저 이름</h3>
-                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
-                        </div>
-                    </div>
 
-                    <p class="talk-text">아아. 제 목소리가 들리나요?</p>
-                </div>
-            </div>
 
             <div class="divider">
                 <span>오후 1시 42분 녹음 종료</span>
@@ -68,5 +91,6 @@
         </div>
 
         <script src="./script/main.js"></script>
+        <script src="./script/menu.js"></script>
     </body>
 </html>
