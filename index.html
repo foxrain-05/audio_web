@@ -10,32 +10,60 @@
 
         <link rel="stylesheet" href="./style/style.css" />
         <link rel="stylesheet" href="./style/audio_bar.css" />
+        <link rel="stylesheet" href="./style/nav.css" />
     </head>
     <body>
-        <div class="content">
-            <div class="divider">
-                <span>2024.11.26 오후 1시 30분 녹음 시작</span>
+        <nav class="nav">
+            <div class="nav-container">
+              <a href="#" class="nav-logo">녹음장치</a>
+              <ul class="nav-menu">
+              </ul>
             </div>
+        </nav>
 
-            <div class="talk active">
+        <div class="content">
+
+
+            <div class="talk">
                 <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
                 <div class="talk-content">
                     <div class="talk-header">
                         <div class="talk-info">
                             <h3 class="talk-name">유저 이름</h3>
                             <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                            <div class="actions">
+                                <div class="more">⋯</div>
+                                <div class="more-menu">
+                                    <button class="menu-item copy">
+                                        <img src="./icon/copy.svg" alt="복사" />
+                                        복사
+                                    </button>
+                                    <button class="menu-item download">
+                                        <img src="./icon/download.svg" alt="다운로드" />
+                                        다운로드
+                                    </button>
+                                    <button class="menu-item edit">
+                                        <img src="./icon/edit.svg" alt="수정" />
+                                        수정
+                                    </button>
+                                    <button class="menu-item recognize">
+                                        <img src="./icon/refresh.svg" alt="재인식" />
+                                        재인식
+                                    </button>
+                                    <button class="menu-item delete">
+                                        <img src="./icon/delete.svg" alt="삭제" />
+                                        삭제
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <p class="talk-text">
-                        아아. 제 목소리가 들리나요? 오늘 여기 뒤에 요즘 클래스 101 촬영팀이 왔어요. 알지 넘버원 크리스터들 강의 많이 있잖아.
-                        쌤이 넘버원에 뽑혔는데. 긴장하지 말고 왜 이렇게 긴장을 했어? 야 규진아 너 왜 긴장했어? 발발발벌 떠네? 긴장하지 마.
-                        쌤은 뭐 긴장 안 하지. 나는 뭐, 내가 한국지리 21년 가르쳤는데 무슨 뭐 무슨 긴장을 한다. 그래 내가 응 긴장 좀 해봤으면
-                        좋겠어. 너무 청심환을 내가 긴 주. 다시. 규진아 왜 이렇게 긴장했어? 무슨 긴장을 한다 그래 내가. 이건 뚜껑도 닫고
-                        마셨어.
+                        아아. 제 목소리가 들리나요? 
                     </p>
 
-                    <div class="action-bar">
+                    <div class="under-bar">
                         <div class="audio-player">
                             <audio class="audio" src="./audio/audio.mp3"></audio>
                             <div class="play-pause">
@@ -47,46 +75,373 @@
                             <span class="time">
                                 <span class="current-time">0:00</span><span class="separator"> / </span><span class="duration">0:00</span>
                             </span>
-                            
-                        </div>
-                        <div class="actions">
-                            <div class="more">⋮</div>
-                            <div class="more-menu">
-                                <button class="menu-item copy">
-                                    <img src="./icon/copy.svg" alt="복사" />
-                                    복사
-                                </button>
-                                <button class="menu-item download">
-                                    <img src="./icon/download.svg" alt="다운로드" />
-                                    다운로드
-                                </button>
-                                <button class="menu-item edit">
-                                    <img src="./icon/edit.svg" alt="수정" />
-                                    수정
-                                </button>
-                                <button class="menu-item recognize">
-                                    <img src="./icon/refresh.svg" alt="재인식" />
-                                    재인식
-                                </button>
-                                <button class="menu-item delete">
-                                    <img src="./icon/delete.svg" alt="삭제" />
-                                    삭제
-                                </button>
-                            </div>
-                        </div>
-                                           
+                        </div>     
                     </div>
+
                 </div>
             </div>
 
+            
+            <div class="talk">
+                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
+                <div class="talk-content">
+                    <div class="talk-header">
+                        <div class="talk-info">
+                            <h3 class="talk-name">유저 이름</h3>
+                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                            <div class="actions">
+                                <div class="more">⋯</div>
+                                <div class="more-menu">
+                                    <button class="menu-item copy">
+                                        <img src="./icon/copy.svg" alt="복사" />
+                                        복사
+                                    </button>
+                                    <button class="menu-item download">
+                                        <img src="./icon/download.svg" alt="다운로드" />
+                                        다운로드
+                                    </button>
+                                    <button class="menu-item edit">
+                                        <img src="./icon/edit.svg" alt="수정" />
+                                        수정
+                                    </button>
+                                    <button class="menu-item recognize">
+                                        <img src="./icon/refresh.svg" alt="재인식" />
+                                        재인식
+                                    </button>
+                                    <button class="menu-item delete">
+                                        <img src="./icon/delete.svg" alt="삭제" />
+                                        삭제
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <p class="talk-text">
+                        아아. 제 목소리가 들리나요? 
+                    </p>
 
-            <div class="divider">
-                <span>오후 1시 42분 녹음 종료</span>
+                    <div class="under-bar">
+                        <div class="audio-player">
+                            <audio class="audio" src="./audio/audio1.wav"></audio>
+                            <div class="play-pause">
+                                <img src="./icon/play.svg" alt="play" class="play" />
+                                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+                            </div>
+
+                            <input class="seek-bar" type="range" min="0" max="100" value="0" />
+                            <span class="time">
+                                <span class="current-time">0:00</span><span class="separator"> / </span><span class="duration">0:00</span>
+                            </span>
+                        </div>     
+                    </div>
+
+                </div>
             </div>
+            
+            <div class="talk">
+                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
+                <div class="talk-content">
+                    <div class="talk-header">
+                        <div class="talk-info">
+                            <h3 class="talk-name">유저 이름</h3>
+                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                            <div class="actions">
+                                <div class="more">⋯</div>
+                                <div class="more-menu">
+                                    <button class="menu-item copy">
+                                        <img src="./icon/copy.svg" alt="복사" />
+                                        복사
+                                    </button>
+                                    <button class="menu-item download">
+                                        <img src="./icon/download.svg" alt="다운로드" />
+                                        다운로드
+                                    </button>
+                                    <button class="menu-item edit">
+                                        <img src="./icon/edit.svg" alt="수정" />
+                                        수정
+                                    </button>
+                                    <button class="menu-item recognize">
+                                        <img src="./icon/refresh.svg" alt="재인식" />
+                                        재인식
+                                    </button>
+                                    <button class="menu-item delete">
+                                        <img src="./icon/delete.svg" alt="삭제" />
+                                        삭제
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="talk-text">
+                        아아. 제 목소리가 들리나요? 
+                    </p>
+
+                    <div class="under-bar">
+                        <div class="audio-player">
+                            <audio class="audio" src="./audio/audio.mp3"></audio>
+                            <div class="play-pause">
+                                <img src="./icon/play.svg" alt="play" class="play" />
+                                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+                            </div>
+
+                            <input class="seek-bar" type="range" min="0" max="100" value="0" />
+                            <span class="time">
+                                <span class="current-time">0:00</span><span class="separator"> / </span><span class="duration">0:00</span>
+                            </span>
+                        </div>     
+                    </div>
+
+                </div>
+            </div>
+            
 
             <div class="divider">
                 <span>오후 2시 38분 녹음 시작</span>
+            </div>
+
+            <div class="talk">
+                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
+                <div class="talk-content">
+                    <div class="talk-header">
+                        <div class="talk-info">
+                            <h3 class="talk-name">유저 이름</h3>
+                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                            <div class="actions">
+                                <div class="more">⋯</div>
+                                <div class="more-menu">
+                                    <button class="menu-item copy">
+                                        <img src="./icon/copy.svg" alt="복사" />
+                                        복사
+                                    </button>
+                                    <button class="menu-item download">
+                                        <img src="./icon/download.svg" alt="다운로드" />
+                                        다운로드
+                                    </button>
+                                    <button class="menu-item edit">
+                                        <img src="./icon/edit.svg" alt="수정" />
+                                        수정
+                                    </button>
+                                    <button class="menu-item recognize">
+                                        <img src="./icon/refresh.svg" alt="재인식" />
+                                        재인식
+                                    </button>
+                                    <button class="menu-item delete">
+                                        <img src="./icon/delete.svg" alt="삭제" />
+                                        삭제
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="talk-text">
+                        아아. 제 목소리가 들리나요? 
+                    </p>
+
+                    <div class="under-bar">
+                        <div class="audio-player">
+                            <audio class="audio" src="./audio/audio.mp3"></audio>
+                            <div class="play-pause">
+                                <img src="./icon/play.svg" alt="play" class="play" />
+                                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+                            </div>
+
+                            <input class="seek-bar" type="range" min="0" max="100" value="0" />
+                            <span class="time">
+                                <span class="current-time">0:00</span><span class="separator"> / </span><span class="duration">0:00</span>
+                            </span>
+                        </div>     
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="talk">
+                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
+                <div class="talk-content">
+                    <div class="talk-header">
+                        <div class="talk-info">
+                            <h3 class="talk-name">유저 이름</h3>
+                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                            <div class="actions">
+                                <div class="more">⋯</div>
+                                <div class="more-menu">
+                                    <button class="menu-item copy">
+                                        <img src="./icon/copy.svg" alt="복사" />
+                                        복사
+                                    </button>
+                                    <button class="menu-item download">
+                                        <img src="./icon/download.svg" alt="다운로드" />
+                                        다운로드
+                                    </button>
+                                    <button class="menu-item edit">
+                                        <img src="./icon/edit.svg" alt="수정" />
+                                        수정
+                                    </button>
+                                    <button class="menu-item recognize">
+                                        <img src="./icon/refresh.svg" alt="재인식" />
+                                        재인식
+                                    </button>
+                                    <button class="menu-item delete">
+                                        <img src="./icon/delete.svg" alt="삭제" />
+                                        삭제
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="talk-text">
+                        아아. 제 목소리가 들리나요? 
+                    </p>
+
+                    <div class="under-bar">
+                        <div class="audio-player">
+                            <audio class="audio" src="./audio/audio.mp3"></audio>
+                            <div class="play-pause">
+                                <img src="./icon/play.svg" alt="play" class="play" />
+                                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+                            </div>
+
+                            <input class="seek-bar" type="range" min="0" max="100" value="0" />
+                            <span class="time">
+                                <span class="current-time">0:00</span><span class="separator"> / </span><span class="duration">0:00</span>
+                            </span>
+                        </div>     
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="talk">
+                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
+                <div class="talk-content">
+                    <div class="talk-header">
+                        <div class="talk-info">
+                            <h3 class="talk-name">유저 이름</h3>
+                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                            <div class="actions">
+                                <div class="more">⋯</div>
+                                <div class="more-menu">
+                                    <button class="menu-item copy">
+                                        <img src="./icon/copy.svg" alt="복사" />
+                                        복사
+                                    </button>
+                                    <button class="menu-item download">
+                                        <img src="./icon/download.svg" alt="다운로드" />
+                                        다운로드
+                                    </button>
+                                    <button class="menu-item edit">
+                                        <img src="./icon/edit.svg" alt="수정" />
+                                        수정
+                                    </button>
+                                    <button class="menu-item recognize">
+                                        <img src="./icon/refresh.svg" alt="재인식" />
+                                        재인식
+                                    </button>
+                                    <button class="menu-item delete">
+                                        <img src="./icon/delete.svg" alt="삭제" />
+                                        삭제
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="talk-text">
+                        아아. 제 목소리가 들리나요? 
+                    </p>
+
+                    <div class="under-bar">
+                        <div class="audio-player">
+                            <audio class="audio" src="./audio/audio.mp3"></audio>
+                            <div class="play-pause">
+                                <img src="./icon/play.svg" alt="play" class="play" />
+                                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+                            </div>
+
+                            <input class="seek-bar" type="range" min="0" max="100" value="0" />
+                            <span class="time">
+                                <span class="current-time">0:00</span><span class="separator"> / </span><span class="duration">0:00</span>
+                            </span>
+                        </div>     
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="talk">
+                <img src="./image/me.webp" alt="유저 프로필 사진" class="profile" />
+                <div class="talk-content">
+                    <div class="talk-header">
+                        <div class="talk-info">
+                            <h3 class="talk-name">유저 이름</h3>
+                            <p class="talk-time">2024.11.26 오후 1시 30분</p>
+                            <div class="actions">
+                                <div class="more">⋯</div>
+                                <div class="more-menu">
+                                    <button class="menu-item copy">
+                                        <img src="./icon/copy.svg" alt="복사" />
+                                        복사
+                                    </button>
+                                    <button class="menu-item download">
+                                        <img src="./icon/download.svg" alt="다운로드" />
+                                        다운로드
+                                    </button>
+                                    <button class="menu-item edit">
+                                        <img src="./icon/edit.svg" alt="수정" />
+                                        수정
+                                    </button>
+                                    <button class="menu-item recognize">
+                                        <img src="./icon/refresh.svg" alt="재인식" />
+                                        재인식
+                                    </button>
+                                    <button class="menu-item delete">
+                                        <img src="./icon/delete.svg" alt="삭제" />
+                                        삭제
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="talk-text">
+                        아아. 제 목소리가 들리나요? 
+                    </p>
+
+                    <div class="under-bar">
+                        <div class="audio-player">
+                            <audio class="audio" src="./audio/audio.mp3"></audio>
+                            <div class="play-pause">
+                                <img src="./icon/play.svg" alt="play" class="play" />
+                                <img src="./icon/pause.svg" alt="pause" class="pause hidden" />
+                            </div>
+
+                            <input class="seek-bar" type="range" min="0" max="100" value="0" />
+                            <span class="time">
+                                <span class="current-time">0:00</span><span class="separator"> / </span><span class="duration">0:00</span>
+                            </span>
+                        </div>     
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="delete-confirm-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h3 class="modal-title">대화 삭제</h3>
+                    <div class="modal-delete-preview"></div>
+                    <div class="modal-message">
+                        <p class="main-message">이 대화를 삭제하시겠습니까?</p>
+                        <p class="warning-message">삭제한 데이터는 복구할 수 없습니다.</p>
+                    </div>
+                    <div class="modal-buttons">
+                        <button id="cancel-delete" class="cancel-button">취소</button>
+                        <button id="confirm-delete" class="confirm-button">삭제</button>
+                    </div>
+                </div>
             </div>
         </div>
 

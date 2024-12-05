@@ -1,15 +1,21 @@
-
+.talk:hover .audio-player {
+    opacity: 1;
+    visibility: visible;
+}
 
 .audio-player {
-    display: flex;
+    opacity: 0;
+    visibility: hidden;
     align-items: center;
     gap: 15px;
-    margin-left: 15px;
+
+    display: flex;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
 }
 
 .seek-bar {
     appearance: none;
-    width: 9.5rem;
+    width: 12rem;
     height: 6px;
     border-radius: 5px;
     --progress: 0%;
@@ -41,7 +47,7 @@
 
 .play,
 .pause {
-    width: 14px;
+    width: 12px;
     display: flex;
     align-items: center;
     justify-content: center;

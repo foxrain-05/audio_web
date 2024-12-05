@@ -1,11 +1,4 @@
-const elements = {
-    slider: document.querySelector(".seek-bar"),
-    audio: document.querySelector("audio"),
-    playButton: document.querySelector(".play"),
-    pauseButton: document.querySelector(".pause"),
-    currentTime: document.querySelector(".current-time"),
-    duration: document.querySelector(".duration"),
-};
+let currentlyPlaying = null;
 
 const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
@@ -13,55 +6,84 @@ const formatTime = (time) => {
     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 };
 
-const togglePlay = (isPlaying) => {
+const togglePlay = (audioPlayer, isPlaying) => {
+    const elements = {
+        audio: audioPlayer.querySelector("audio"),
+        playButton: audioPlayer.querySelector(".play"),
+        pauseButton: audioPlayer.querySelector(".pause"),
+        slider: audioPlayer.querySelector(".seek-bar"),
+        currentTime: audioPlayer.querySelector(".current-time"),
+        duration: audioPlayer.querySelector(".duration"),
+    };
+    
+    if (isPlaying && currentlyPlaying && currentlyPlaying !== elements.audio) {
+        const prevPlayer = currentlyPlaying.closest('.audio-player');
+        togglePlay(prevPlayer, false);
+    }
+
     elements.playButton.classList.toggle("hidden", isPlaying);
     elements.pauseButton.classList.toggle("hidden", !isPlaying);
 
     if (isPlaying) {
         elements.audio.play();
+        currentlyPlaying = elements.audio;
     } else {
         elements.audio.pause();
+        if (currentlyPlaying === elements.audio) {
+            currentlyPlaying = null;
+        }
     }
 };
 
-const updateProgress = () => {
-    const { audio, slider, currentTime, duration } = elements;
-    const progress = (audio.currentTime / audio.duration) * 100;
+const updateProgress = (audioPlayer) => {
+    const elements = {
+        audio: audioPlayer.querySelector("audio"),
+        slider: audioPlayer.querySelector(".seek-bar"),
+        currentTime: audioPlayer.querySelector(".current-time"),
+        duration: audioPlayer.querySelector(".duration"),
+    };
 
-    slider.style.setProperty("--progress", `${progress}%`);
-    slider.value = progress;
-    currentTime.textContent = formatTime(audio.currentTime);
-    duration.textContent = formatTime(audio.duration);
+    const progress = (elements.audio.currentTime / elements.audio.duration) * 100;
 
-    requestAnimationFrame(updateProgress);
+    elements.slider.style.setProperty("--progress", `${progress}%`);
+    elements.slider.value = progress;
+    elements.currentTime.textContent = formatTime(elements.audio.currentTime);
+    elements.duration.textContent = formatTime(elements.audio.duration);
+
+    requestAnimationFrame(() => updateProgress(audioPlayer));
 };
 
-// 이벤트 리스너 설정
-const initializeEventListeners = () => {
-    const { playButton, pauseButton, audio, slider } = elements;
+const initializeAudioPlayer = (audioPlayer) => {
+    const elements = {
+        audio: audioPlayer.querySelector("audio"),
+        playButton: audioPlayer.querySelector(".play"),
+        pauseButton: audioPlayer.querySelector(".pause"),
+        slider: audioPlayer.querySelector(".seek-bar"),
+    };
 
-    playButton.addEventListener("click", () => togglePlay(true));
-    pauseButton.addEventListener("click", () => togglePlay(false));
+    elements.playButton.addEventListener("click", () => togglePlay(audioPlayer, true));
+    elements.pauseButton.addEventListener("click", () => togglePlay(audioPlayer, false));
 
-    audio.addEventListener("timeupdate", updateProgress);
-    audio.addEventListener("loadedmetadata", () => {
-        updateProgress();
-        elements.duration.textContent = formatTime(audio.duration);
+    elements.audio.addEventListener("loadedmetadata", () => {
+        updateProgress(audioPlayer);
     });
 
-    audio.addEventListener("ended", () => {
-        slider.style.setProperty("--progress", "0%");
-        slider.value = 0;
-        audio.currentTime = 0;
-        togglePlay(false);
+    elements.audio.addEventListener("ended", () => {
+        elements.slider.style.setProperty("--progress", "0%");
+        elements.slider.value = 0;
+        elements.audio.currentTime = 0;
+        togglePlay(audioPlayer, false);
     });
 
-    slider.addEventListener("input", (e) => {
+    elements.slider.addEventListener("input", (e) => {
         const value = e.target.value;
-        slider.style.setProperty("--progress", `${value}%`);
-        audio.currentTime = (audio.duration / 100) * value;
+        elements.slider.style.setProperty("--progress", `${value}%`);
+        elements.audio.currentTime = (elements.audio.duration / 100) * value;
     });
 };
 
-updateProgress();
-initializeEventListeners();
+// 모든 오디오 플레이어 초기화
+document.querySelectorAll('.audio-player').forEach(player => {
+    updateProgress(player);
+    initializeAudioPlayer(player);
+});
